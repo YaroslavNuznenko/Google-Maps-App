@@ -29,6 +29,7 @@
                 <button type="button" class="btn btn-primary" data-action="map-add">Добавить объект</button>
                 <button type="button" class="btn btn-warning" data-action="map-edit">Редактировать объект</button>
                 <button type="button" class="btn btn-danger" data-action="map-delete">Удалить объект</button>
+                <button type="button" class="btn btn-info" data-action="map-info">Справка!</button>
             </div>
 
             <div class="panel panel-default hidden" id="realtyForm">
@@ -91,6 +92,11 @@
                         break;
                     case'map-edit':
                         m.form.editMarker();
+                        break;
+                    case'map-info':
+                        alert("Добавление маркера: после нажатия на кнопку маркер по умолчанию добавляеться на киевские координаты, вы можете поменять координати перетаскивая маркер." +
+                            " \nРедактирование маркера: Выбираете маркер и нажимаете кнопку 'Редактировать обьект' " +
+                            " \nУдаление маркера: Выбираете маркер и нажимаете кнопку 'Удалить обьект'");
                         break;
                 }
             })
