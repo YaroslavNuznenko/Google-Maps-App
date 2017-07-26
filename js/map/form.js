@@ -28,7 +28,7 @@ function MapForm(map,formId) {
     this.editMarker=function(){
         marker=map.getEditMarker();
         formElement.classList.remove('hidden');
-        //marker.getGoogleMarker().draggable=true;
+        marker.getGoogleMarker().draggable=true;
         formInputs.positionInput.value=marker.getPosition();
         formInputs.titleInput.value=marker.getGoogleMarker().getTitle();
         map.saveMarker(marker);

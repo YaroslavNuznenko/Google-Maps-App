@@ -91,13 +91,14 @@ function AdminMap(options){
     };
     this.getEditMarker=function() {
         console.log(this._markers);
-        for(var i=0;i<this._markers.length;i++){
-            if(selectedMarker.id==this._markers[i].getId())
-            {
-                this.saveMarkersToLocalStorage();
-                return this._markers[i];
+        console.log(selectedMarker);
+            for(var i=0;i<this._markers.length;i++){
+                if(selectedMarker.id==this._markers[i].getId())
+                {
+                    this.saveMarkersToLocalStorage();
+                    return this._markers[i];
+                }
             }
-        }
     };
     var parentRenderMarkets=this.renderMarkers;
     this.renderMarkers=function () {
