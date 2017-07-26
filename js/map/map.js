@@ -80,6 +80,10 @@ function AdminMap(options){
     };
     this.removeMarker=function () {
         console.log(this._markers);
+        if(selectedMarker===undefined){
+            alert("Вы не выбрали маркер (для выбора наведите и кликните на маркер)");
+            return;
+        }
         for(var i=0;i<this._markers.length;i++){
             if(selectedMarker.id==this._markers[i].getId())
             {   this._markers[i].getGoogleMarker().setMap(null);
@@ -91,7 +95,10 @@ function AdminMap(options){
     };
     this.getEditMarker=function() {
         console.log(this._markers);
-        console.log(selectedMarker);
+        if(selectedMarker===undefined){
+            alert("Вы не выбрали маркер (для выбора наведите и кликните на маркер)");
+            return 0;
+        }
             for(var i=0;i<this._markers.length;i++){
                 if(selectedMarker.id==this._markers[i].getId())
                 {
